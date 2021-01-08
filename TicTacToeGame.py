@@ -3,7 +3,6 @@
 # Indexes correspond to numpad positions
 
 def display_board(board):
-    
     row1 = f' {board[7]} | {board[8]} | {board[9]} '
     row2 = f' {board[4]} | {board[5]} | {board[6]} '
     row3 = f' {board[1]} | {board[2]} | {board[3]} '
@@ -14,25 +13,20 @@ def display_board(board):
     print(rows)
 
 ### Function takes palyer input to choose marker
-def player_input():
-    
-    p1mark = 'null'
-    p2mark = 'null'
 
-    markers = ['X','O']
-    
-    while p1mark not in markers:
-        
+def player_input(): 
+    bool = True
+    while bool:
         p1mark = input("Player 1, do you want to be X or O? ")
-        
-        if p1mark not in markers:
-            print('Sorry, that was not a choice!')
-        
-        if p1mark in markers: 
-            if p1mark == markers[0]:
-                p2mark = markers[1]
-            elif p1mark == markers[1]:
-                p2mark = markers[0]
+        if p1mark == 'X' or p1mark == 'O':
+            if p1mark == 'X':
+                p2mark = 'O'
+            else:
+                p2mark = 'X'
             print(f"Player 1 is {p1mark}, and Player 2 is {p2mark}")
+            bool = False
+        else:
+            print('Sorry that is not a choice')
+
 
 ### 
