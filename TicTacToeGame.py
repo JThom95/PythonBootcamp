@@ -1,5 +1,5 @@
 
-### Fucntion displays board when passed a list 
+### Function displays board when passed a list 
 # Indexes correspond to numpad positions
 
 def display_board(board):
