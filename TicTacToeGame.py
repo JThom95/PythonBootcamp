@@ -31,7 +31,7 @@ def player_input():
 
 
 ### Function Takes in board list obj, a marker, and desired position
-# and assigns it to the board
+# and assigns it to the board 
 
 def place_marker(board, marker, position):
     if position in range(1,10):
@@ -46,7 +46,7 @@ def place_marker(board, marker, position):
                 bool = False          
 
 
-### Function that takes in marker and checks to see if marker has won
+### Function that takes in marker and checks to see if marker has won (returns bool)
 
 def win_check(board, mark):
     
@@ -67,7 +67,7 @@ def win_check(board, mark):
     return win    
 
 
-### Function that randomly decides who goes first
+### Function that randomly decides who goes first (return str)
 import random
 
 def choose_first():
@@ -80,4 +80,18 @@ def choose_first():
         return 'Player 2 goes first!'
 
 
-### 
+### Fucntion that checks whether or not a space is open (returns bool)
+def space_check(board, position):
+    
+    openSpace = bool
+    
+    for i in board[int(position)]:
+        if board[int(position)] == 'X' or board[int(position)] == 'O':
+            openSpace = False
+        else:
+            openSpace = True
+    
+    return openSpace
+
+
+###
