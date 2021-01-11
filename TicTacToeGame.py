@@ -29,4 +29,12 @@ def player_input():
             print('Sorry that is not a choice')
 
 
-### 
+### Function Takes in board list obj, a marker, and desired position
+# and assigns it to the board
+
+def place_marker(board, marker, position):
+    if position in range(1,9):
+        board[position] = marker
+    else:
+        print("Sorry that is not a valid position!")
+        position = input("Please choose a position for your marker (1-9): ")
