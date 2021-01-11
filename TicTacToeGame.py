@@ -87,11 +87,10 @@ def space_check(board, position):
     
     openSpace = bool
     
-    for i in board[int(position)]:
-        if board[int(position)] == 'X' or board[int(position)] == 'O':
-            openSpace = False
-        else:
-            openSpace = True
+    if board[int(position)] == 'X' or board[int(position)] == 'O':
+        openSpace = False
+    else:
+        openSpace = True
     
     return openSpace
 
@@ -109,4 +108,3 @@ def full_board_check(board):
 
     return boardFull
 
-    
