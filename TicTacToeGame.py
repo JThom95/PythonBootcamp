@@ -12,6 +12,7 @@ def display_board(board):
     
     print(rows)
 
+
 ### Function takes palyer input to choose marker
 
 def player_input(): 
@@ -42,4 +43,28 @@ def place_marker(board, marker, position):
             position = int(input("Please choose a position for your marker (1-9): "))
             if position in range(1,10):
                 board[position] = marker
-                bool = False            
+                bool = False          
+
+
+### Function that takes in marker and checks to see if marker has won
+
+def win_check(board, mark):
+    
+    win = bool
+        
+    if ((mark == board[1] and mark == board[5] and mark == board [9]) or
+        (mark == board[4] and mark == board[5] and mark == board [6]) or
+        (mark == board[7] and mark == board[8] and mark == board [9]) or
+        (mark == board[7] and mark == board[4] and mark == board [1]) or
+        (mark == board[8] and mark == board[5] and mark == board [2]) or 
+        (mark == board[9] and mark == board[6] and mark == board [3]) or 
+        (mark == board[1] and mark == board[5] and mark == board [9]) or
+        (mark == board[7] and mark == board[5] and mark == board [3])):
+            win = True
+    else:
+        win = False
+    
+    return win    
+
+
+### 
