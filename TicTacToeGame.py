@@ -68,6 +68,7 @@ def win_check(board, mark):
 
 
 ### Function that randomly decides who goes first (return str)
+
 import random
 
 def choose_first():
@@ -81,6 +82,7 @@ def choose_first():
 
 
 ### Fucntion that checks whether or not a space is open (returns bool)
+
 def space_check(board, position):
     
     openSpace = bool
@@ -94,4 +96,17 @@ def space_check(board, position):
     return openSpace
 
 
-###
+###  Function that checks if the board is full (returns bool)
+
+def full_board_check(board):
+       
+    boardFull = True 
+    
+    if boardFull:
+        for i in board[1:10]:
+            if i != 'X' and i != 'O':
+                boardFull = False
+
+    return boardFull
+
+    
