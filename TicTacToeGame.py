@@ -67,4 +67,17 @@ def win_check(board, mark):
     return win    
 
 
+### Function that randomly decides who goes first
+import random
+
+def choose_first():
+    
+    designator = random.randint(1,2)
+
+    if designator == 1:
+        return 'Player 1 goes first!'
+    else:
+        return 'Player 2 goes first!'
+
+
 ### 
