@@ -86,7 +86,7 @@ def choose_first():
 def space_check(board, position):
     
     openSpace = bool
-    
+
     if board[int(position)] == 'X' or board[int(position)] == 'O':
         openSpace = False
     else:
@@ -103,7 +103,7 @@ def full_board_check(board):
     
     if boardFull:
         for i in board[1:10]:
-            if i != 'X' and i != 'O':
+            if i == ' ':
                 boardFull = False
 
     return boardFull
