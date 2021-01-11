@@ -33,8 +33,13 @@ def player_input():
 # and assigns it to the board
 
 def place_marker(board, marker, position):
-    if position in range(1,9):
+    if position in range(1,10):
         board[position] = marker
     else:
-        print("Sorry that is not a valid position!")
-        position = input("Please choose a position for your marker (1-9): ")
+        bool = True
+        while bool:
+            print("Sorry that is not a valid position!")
+            position = int(input("Please choose a position for your marker (1-9): "))
+            if position in range(1,10):
+                board[position] = marker
+                bool = False            
